@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Admin Dashboard</title>
+  <title>Education Admin Dashboard</title>
   <link rel="stylesheet" href="assets/css/style.css">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
   <style>
@@ -332,7 +332,7 @@
     }
 
     .logo-icon::before {
-      content: "🤖";
+      content: "🎓";
       filter: brightness(0) invert(1);
     }
 
@@ -1305,8 +1305,8 @@
           <div class="logo-section">
             <div class="logo-icon"></div>
             <div class="logo-text">
-              <h1 data-i18n="stackly_admin">Stackly Admin</h1>
-              <p data-i18n="ai_tools_management">AI Tools Management</p>
+              <h1 data-i18n="stackly_admin">Stackly Education Admin</h1>
+              <p data-i18n="ai_tools_management">Education Management</p>
             </div>
           </div>
         </div>
@@ -1341,29 +1341,29 @@
             </div>
             <div class="stat-content">
               <h3 class="stat-number" id="totalUsers">0</h3>
-              <p class="stat-label" data-i18n="total_users">Total Users</p>
+              <p class="stat-label" data-i18n="total_users">Total Students</p>
               <span class="stat-trend positive" data-i18n="trend_up">+12% this month</span>
             </div>
           </div>
           
           <div class="stat-card">
             <div class="stat-icon tools">
-              <i class="fas fa-robot"></i>
+              <i class="fas fa-graduation-cap"></i>
             </div>
             <div class="stat-content">
-              <h3 class="stat-number">12</h3>
-              <p class="stat-label" data-i18n="ai_tools">AI Tools</p>
+              <h3 class="stat-number">24</h3>
+              <p class="stat-label" data-i18n="ai_tools">Active Courses</p>
               <span class="stat-trend positive" data-i18n="trend_up">+8% this month</span>
             </div>
           </div>
           
           <div class="stat-card">
             <div class="stat-icon requests">
-              <i class="fas fa-handshake"></i>
+              <i class="fas fa-user-graduate"></i>
             </div>
             <div class="stat-content">
               <h3 class="stat-number">2,847</h3>
-              <p class="stat-label" data-i18n="total_requests">Total Requests</p>
+              <p class="stat-label" data-i18n="total_requests">Course Enrollments</p>
               <span class="stat-trend positive" data-i18n="trend_up">+15% this month</span>
             </div>
           </div>
@@ -1374,7 +1374,7 @@
             </div>
             <div class="stat-content">
               <h3 class="stat-number">$2.4M</h3>
-              <p class="stat-label" data-i18n="monthly_revenue">Monthly Revenue</p>
+              <p class="stat-label" data-i18n="monthly_revenue">Course Revenue</p>
               <span class="stat-trend positive" data-i18n="trend_up">+15% this month</span>
             </div>
           </div>
@@ -1385,9 +1385,9 @@
           <!-- User Management - Full Width -->
           <div class="dashboard-card users-card full-width">
             <div class="card-header">
-              <h3 data-i18n="user_management">User Management</h3>
+              <h3 data-i18n="user_management">Student Management</h3>
               <div class="search-box">
-                <input type="text" id="userSearch" placeholder="Search users..." data-i18n-placeholder="search_users">
+                <input type="text" id="userSearch" placeholder="Search students..." data-i18n-placeholder="search_users">
                 <i class="fas fa-search"></i>
               </div>
             </div>
@@ -1395,10 +1395,10 @@
               <table id="usersTable" class="modern-table">
                 <thead>
                   <tr>
-                    <th data-i18n="user">User</th>
+                    <th data-i18n="user">Student</th>
                     <th data-i18n="email">Email</th>
                     <th data-i18n="last_active">Last Active</th>
-                    <th data-i18n="tools_used">Tools Used</th>
+                    <th data-i18n="tools_used">Courses Enrolled</th>
                     <th data-i18n="status">Status</th>
                     <th data-i18n="actions">Actions</th>
                   </tr>
@@ -1413,50 +1413,50 @@
           <!-- AI Tools Overview - Full Width -->
           <div class="dashboard-card ai-tools-card full-width">
             <div class="card-header">
-              <h3 data-i18n="ai_tools_overview">AI Tools Overview</h3>
-              <button class="btn-primary" data-i18n="add_tool">Add Tool</button>
+              <h3 data-i18n="ai_tools_overview">Education Courses Overview</h3>
+              <button class="btn-primary" data-i18n="add_tool">Add Course</button>
             </div>
             <div class="tools-grid">
               <div class="tool-item">
-                <div class="tool-icon">AI</div>
+                <div class="tool-icon">DM</div>
                 <div class="tool-info">
-                  <h4 data-i18n="content_generator">Content Generator</h4>
-                  <p data-i18n="content_generator_desc">AI-powered content creation</p>
+                  <h4 data-i18n="content_generator">Digital Marketing</h4>
+                  <p data-i18n="content_generator_desc">Complete digital marketing course</p>
                   <div class="tool-stats">
-                    <span class="usage">847 uses</span>
+                    <span class="usage">847 students</span>
                     <span class="status active" data-i18n="active">Active</span>
                   </div>
                 </div>
               </div>
               <div class="tool-item">
-                <div class="tool-icon">DA</div>
+                <div class="tool-icon">WD</div>
                 <div class="tool-info">
-                  <h4 data-i18n="data_analyzer">Data Analyzer</h4>
-                  <p data-i18n="data_analyzer_desc">Intelligent data insights</p>
+                  <h4 data-i18n="data_analyzer">Web Development</h4>
+                  <p data-i18n="data_analyzer_desc">Full-stack web development</p>
                   <div class="tool-stats">
-                    <span class="usage">623 uses</span>
+                    <span class="usage">623 students</span>
                     <span class="status active" data-i18n="active">Active</span>
                   </div>
                 </div>
               </div>
               <div class="tool-item">
-                <div class="tool-icon">IC</div>
+                <div class="tool-icon">DS</div>
                 <div class="tool-info">
-                  <h4 data-i18n="image_creator">Image Creator</h4>
-                  <p data-i18n="image_creator_desc">AI image generation</p>
+                  <h4 data-i18n="image_creator">Data Science</h4>
+                  <p data-i18n="image_creator_desc">Data analysis and machine learning</p>
                   <div class="tool-stats">
-                    <span class="usage">1,234 uses</span>
+                    <span class="usage">1,234 students</span>
                     <span class="status active" data-i18n="active">Active</span>
                   </div>
                 </div>
               </div>
               <div class="tool-item">
-                <div class="tool-icon">CA</div>
+                <div class="tool-icon">UX</div>
                 <div class="tool-info">
-                  <h4 data-i18n="chat_assistant">Chat Assistant</h4>
-                  <p data-i18n="chat_assistant_desc">Conversational AI</p>
+                  <h4 data-i18n="chat_assistant">UX/UI Design</h4>
+                  <p data-i18n="chat_assistant_desc">User experience and interface design</p>
                   <div class="tool-stats">
-                    <span class="usage">2,156 uses</span>
+                    <span class="usage">2,156 students</span>
                     <span class="status active" data-i18n="active">Active</span>
                   </div>
                 </div>
@@ -1475,8 +1475,8 @@
                   <i class="fas fa-check"></i>
                 </div>
                 <div class="activity-content">
-                  <p><strong data-i18n="new_tool_added">New AI tool added</strong></p>
-                  <p data-i18n="advanced_ai_processor">Advanced AI Processor - $2.5M</p>
+                  <p><strong data-i18n="new_tool_added">New course launched</strong></p>
+                  <p data-i18n="advanced_ai_processor">Advanced Python Programming - $2.5M</p>
                   <span class="activity-time" data-i18n="time_ago">2 hours ago</span>
                 </div>
               </div>
@@ -1485,7 +1485,7 @@
                   <i class="fas fa-user-plus"></i>
                 </div>
                 <div class="activity-content">
-                  <p><strong data-i18n="new_user_registered">New user registered</strong></p>
+                  <p><strong data-i18n="new_user_registered">New student enrolled</strong></p>
                   <p data-i18n="john_doe_example">john.doe@example.com</p>
                   <span class="activity-time" data-i18n="time_ago">4 hours ago</span>
                 </div>
@@ -1495,8 +1495,8 @@
                   <i class="fas fa-exclamation-triangle"></i>
                 </div>
                 <div class="activity-content">
-                  <p><strong data-i18n="high_usage_alert">High usage alert</strong></p>
-                  <p data-i18n="content_generator_usage">Content Generator - 95% capacity</p>
+                  <p><strong data-i18n="high_usage_alert">High enrollment alert</strong></p>
+                  <p data-i18n="content_generator_usage">Digital Marketing Course - 95% capacity</p>
                   <span class="activity-time" data-i18n="time_ago">6 hours ago</span>
                 </div>
               </div>
@@ -1505,8 +1505,8 @@
                   <i class="fas fa-chart-line"></i>
                 </div>
                 <div class="activity-content">
-                  <p><strong data-i18n="revenue_milestone">Revenue milestone reached</strong></p>
-                  <p data-i18n="monthly_target_achieved">Monthly target achieved - $2.4M</p>
+                  <p><strong data-i18n="revenue_milestone">Course completion milestone</strong></p>
+                  <p data-i18n="monthly_target_achieved">Monthly target achieved - 2,400 graduates</p>
                   <span class="activity-time" data-i18n="time_ago">1 day ago</span>
                 </div>
               </div>
@@ -1549,7 +1549,7 @@
       </td>
       <td>admin@enkonix.in</td>
       <td>Now</td>
-      <td>All Tools</td>
+        <td>All Courses</td>
       <td><span style="padding: 4px 12px; border-radius: 20px; background: #dcfce7; color: #166534; font-size: 0.8rem;">Active</span></td>
       <td>
         <button style="padding: 6px 12px; background: #f1f5f9; border: 1px solid #e2e8f0; border-radius: 6px; font-size: 0.8rem; cursor: pointer;">View</button>
@@ -1576,7 +1576,7 @@
         </td>
         <td>${email}</td>
         <td>2 hours ago</td>
-        <td>${Math.floor(Math.random() * 5) + 1} tools</td>
+        <td>${Math.floor(Math.random() * 5) + 1} courses</td>
         <td><span style="padding: 4px 12px; border-radius: 20px; background: #dcfce7; color: #166534; font-size: 0.8rem;">Active</span></td>
         <td>
           <button style="padding: 6px 12px; background: #f1f5f9; border: 1px solid #e2e8f0; border-radius: 6px; font-size: 0.8rem; cursor: pointer;">View</button>
@@ -1639,8 +1639,8 @@
         "contact": "Contact",
         "logout": "Logout",
         "admin_dashboard": "Admin Dashboard",
-        "stackly_admin": "Stackly Admin",
-        "ai_tools_management": "AI Tools Management",
+        "stackly_admin": "Stackly Education Admin",
+        "ai_tools_management": "Education Management",
         "dashboard": "Dashboard",
         "ai_tools": "AI Tools",
         "users": "Users",
@@ -1649,39 +1649,39 @@
         "reports": "Reports",
         "settings": "Settings",
         "welcome_message": "Welcome to your AI tools management dashboard",
-        "total_users": "Total Users",
-        "ai_tools": "AI Tools",
-        "total_requests": "Total Requests",
-        "monthly_revenue": "Monthly Revenue",
+        "total_users": "Total Students",
+        "ai_tools": "Active Courses",
+        "total_requests": "Course Enrollments",
+        "monthly_revenue": "Course Revenue",
         "trend_up": "+12% this month",
-        "ai_tools_overview": "AI Tools Overview",
-        "add_tool": "Add Tool",
-        "content_generator": "Content Generator",
-        "content_generator_desc": "AI-powered content creation",
-        "data_analyzer": "Data Analyzer",
-        "data_analyzer_desc": "Intelligent data insights",
-        "image_creator": "Image Creator",
-        "image_creator_desc": "AI image generation",
-        "chat_assistant": "Chat Assistant",
-        "chat_assistant_desc": "Conversational AI",
+        "ai_tools_overview": "Education Courses Overview",
+        "add_tool": "Add Course",
+        "content_generator": "Digital Marketing",
+        "content_generator_desc": "Complete digital marketing course",
+        "data_analyzer": "Web Development",
+        "data_analyzer_desc": "Full-stack web development",
+        "image_creator": "Data Science",
+        "image_creator_desc": "Data analysis and machine learning",
+        "chat_assistant": "UX/UI Design",
+        "chat_assistant_desc": "User experience and interface design",
         "active": "Active",
-        "user_management": "User Management",
-        "search_users": "Search users...",
-        "user": "User",
+        "user_management": "Student Management",
+        "search_users": "Search students...",
+        "user": "Student",
         "last_active": "Last Active",
-        "tools_used": "Tools Used",
+        "tools_used": "Courses Enrolled",
         "status": "Status",
         "actions": "Actions",
         "recent_activity": "Recent Activity",
-        "new_tool_added": "New AI tool added",
-        "advanced_ai_processor": "Advanced AI Processor - $2.5M",
+        "new_tool_added": "New course launched",
+        "advanced_ai_processor": "Advanced Python Programming - $2.5M",
         "time_ago": "2 hours ago",
-        "new_user_registered": "New user registered",
+        "new_user_registered": "New student enrolled",
         "john_doe_example": "john.doe@example.com",
-        "high_usage_alert": "High usage alert",
-        "content_generator_usage": "Content Generator - 95% capacity",
-        "revenue_milestone": "Revenue milestone reached",
-        "monthly_target_achieved": "Monthly target achieved - $2.4M"
+        "high_usage_alert": "High enrollment alert",
+        "content_generator_usage": "Digital Marketing Course - 95% capacity",
+        "revenue_milestone": "Course completion milestone",
+        "monthly_target_achieved": "Monthly target achieved - 2,400 graduates"
       },
       ar: {
         "home": "الرئيسية",
@@ -1704,8 +1704,8 @@
         "contact": "اتصل بنا",
         "logout": "تسجيل الخروج",
         "admin_dashboard": "لوحة تحكم الإدارة",
-        "stackly_admin": "ستاكلي الإدارة",
-        "ai_tools_management": "إدارة أدوات الذكاء الاصطناعي",
+        "stackly_admin": "ستاكلي إدارة التعليم",
+        "ai_tools_management": "إدارة التعليم",
         "dashboard": "لوحة التحكم",
         "ai_tools": "أدوات الذكاء الاصطناعي",
         "users": "المستخدمون",
@@ -1714,39 +1714,39 @@
         "reports": "التقارير",
         "settings": "الإعدادات",
         "welcome_message": "مرحباً بك في لوحة تحكم إدارة أدوات الذكاء الاصطناعي",
-        "total_users": "إجمالي المستخدمين",
-        "ai_tools": "أدوات الذكاء الاصطناعي",
-        "total_requests": "إجمالي الطلبات",
-        "monthly_revenue": "الإيرادات الشهرية",
+        "total_users": "إجمالي الطلاب",
+        "ai_tools": "الدورات النشطة",
+        "total_requests": "تسجيلات الدورات",
+        "monthly_revenue": "إيرادات الدورات",
         "trend_up": "+12% هذا الشهر",
-        "ai_tools_overview": "نظرة عامة على أدوات الذكاء الاصطناعي",
-        "add_tool": "إضافة أداة",
-        "content_generator": "مولد المحتوى",
-        "content_generator_desc": "إنشاء محتوى مدعوم بالذكاء الاصطناعي",
-        "data_analyzer": "محلل البيانات",
-        "data_analyzer_desc": "رؤى ذكية للبيانات",
-        "image_creator": "منشئ الصور",
-        "image_creator_desc": "توليد صور بالذكاء الاصطناعي",
-        "chat_assistant": "مساعد المحادثة",
-        "chat_assistant_desc": "ذكاء اصطناعي محادثة",
+        "ai_tools_overview": "نظرة عامة على دورات التعليم",
+        "add_tool": "إضافة دورة",
+        "content_generator": "التسويق الرقمي",
+        "content_generator_desc": "دورة التسويق الرقمي الشاملة",
+        "data_analyzer": "تطوير الويب",
+        "data_analyzer_desc": "تطوير الويب الكامل",
+        "image_creator": "علم البيانات",
+        "image_creator_desc": "تحليل البيانات والتعلم الآلي",
+        "chat_assistant": "تصميم UX/UI",
+        "chat_assistant_desc": "تصميم تجربة المستخدم والواجهة",
         "active": "نشط",
-        "user_management": "إدارة المستخدمين",
-        "search_users": "البحث عن المستخدمين...",
-        "user": "المستخدم",
+        "user_management": "إدارة الطلاب",
+        "search_users": "البحث عن الطلاب...",
+        "user": "الطالب",
         "last_active": "آخر نشاط",
-        "tools_used": "الأدوات المستخدمة",
+        "tools_used": "الدورات المسجلة",
         "status": "الحالة",
         "actions": "الإجراءات",
         "recent_activity": "النشاط الأخير",
-        "new_tool_added": "تم إضافة أداة ذكاء اصطناعي جديدة",
-        "advanced_ai_processor": "معالج ذكاء اصطناعي متقدم - 2.5 مليون دولار",
+        "new_tool_added": "تم إطلاق دورة جديدة",
+        "advanced_ai_processor": "برمجة Python المتقدمة - 2.5 مليون دولار",
         "time_ago": "منذ ساعتين",
-        "new_user_registered": "مستخدم جديد مسجل",
+        "new_user_registered": "طالب جديد مسجل",
         "john_doe_example": "john.doe@example.com",
-        "high_usage_alert": "تنبيه استخدام عالي",
-        "content_generator_usage": "مولد المحتوى - 95% من السعة",
-        "revenue_milestone": "تم الوصول إلى معلم الإيرادات",
-        "monthly_target_achieved": "تم تحقيق الهدف الشهري - 2.4 مليون دولار"
+        "high_usage_alert": "تنبيه تسجيل عالي",
+        "content_generator_usage": "دورة التسويق الرقمي - 95% من السعة",
+        "revenue_milestone": "تم الوصول إلى معلم إكمال الدورة",
+        "monthly_target_achieved": "تم تحقيق الهدف الشهري - 2,400 خريج"
       },
       he: {
         "home": "בית",
@@ -1769,8 +1769,8 @@
         "contact": "צור קשר",
         "logout": "התנתק",
         "admin_dashboard": "לוח בקרה של מנהל",
-        "stackly_admin": "סטקלי אדמין",
-        "ai_tools_management": "ניהול כלי בינה מלאכותית",
+        "stackly_admin": "סטקלי אדמין חינוך",
+        "ai_tools_management": "ניהול חינוך",
         "dashboard": "לוח בקרה",
         "ai_tools": "כלי בינה מלאכותית",
         "users": "משתמשים",
@@ -1779,39 +1779,39 @@
         "reports": "דוחות",
         "settings": "הגדרות",
         "welcome_message": "ברוכים הבאים ללוח הבקרה של ניהול כלי בינה מלאכותית",
-        "total_users": "סה\"כ משתמשים",
-        "ai_tools": "כלי בינה מלאכותית",
-        "total_requests": "סה\"כ בקשות",
-        "monthly_revenue": "הכנסות חודשיות",
+        "total_users": "סה\"כ סטודנטים",
+        "ai_tools": "קורסים פעילים",
+        "total_requests": "הרשמות לקורסים",
+        "monthly_revenue": "הכנסות קורסים",
         "trend_up": "+12% החודש",
-        "ai_tools_overview": "סקירת כלי בינה מלאכותית",
-        "add_tool": "הוסף כלי",
-        "content_generator": "מחולל תוכן",
-        "content_generator_desc": "יצירת תוכן מונעת בינה מלאכותית",
-        "data_analyzer": "מנתח נתונים",
-        "data_analyzer_desc": "תובנות חכמות לנתונים",
-        "image_creator": "יוצר תמונות",
-        "image_creator_desc": "יצירת תמונות בבינה מלאכותית",
-        "chat_assistant": "עוזר צ'אט",
-        "chat_assistant_desc": "בינה מלאכותית שיחה",
+        "ai_tools_overview": "סקירת קורסי חינוך",
+        "add_tool": "הוסף קורס",
+        "content_generator": "שיווק דיגיטלי",
+        "content_generator_desc": "קורס שיווק דיגיטלי מקיף",
+        "data_analyzer": "פיתוח אתרים",
+        "data_analyzer_desc": "פיתוח אתרים מלא",
+        "image_creator": "מדעי נתונים",
+        "image_creator_desc": "ניתוח נתונים ולמידת מכונה",
+        "chat_assistant": "עיצוב UX/UI",
+        "chat_assistant_desc": "עיצוב חוויית משתמש וממשק",
         "active": "פעיל",
-        "user_management": "ניהול משתמשים",
-        "search_users": "חפש משתמשים...",
-        "user": "משתמש",
+        "user_management": "ניהול סטודנטים",
+        "search_users": "חפש סטודנטים...",
+        "user": "סטודנט",
         "last_active": "פעילות אחרונה",
-        "tools_used": "כלים בשימוש",
+        "tools_used": "קורסים רשומים",
         "status": "סטטוס",
         "actions": "פעולות",
         "recent_activity": "פעילות אחרונה",
-        "new_tool_added": "כלי בינה מלאכותית חדש נוסף",
-        "advanced_ai_processor": "מעבד בינה מלאכותית מתקדם - 2.5 מיליון דולר",
+        "new_tool_added": "קורס חדש הושק",
+        "advanced_ai_processor": "תכנות Python מתקדם - 2.5 מיליון דולר",
         "time_ago": "לפני שעתיים",
-        "new_user_registered": "משתמש חדש נרשם",
+        "new_user_registered": "סטודנט חדש נרשם",
         "john_doe_example": "john.doe@example.com",
-        "high_usage_alert": "התראת שימוש גבוה",
-        "content_generator_usage": "מחולל תוכן - 95% קיבולת",
-        "revenue_milestone": "הושג אבן דרך בהכנסות",
-        "monthly_target_achieved": "הושג יעד חודשי - 2.4 מיליון דולר"
+        "high_usage_alert": "התראת הרשמה גבוהה",
+        "content_generator_usage": "קורס שיווק דיגיטלי - 95% קיבולת",
+        "revenue_milestone": "הושג אבן דרך בהשלמת קורס",
+        "monthly_target_achieved": "הושג יעד חודשי - 2,400 בוגרים"
       }
     };
 

@@ -3,16 +3,16 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Stackly AI Tools - Login</title>
+  <title>Stackly - Education Platform</title>
   <!-- Using system fonts to eliminate unused Unicode ranges -->
   <style>
     :root {
-      --primary-color: #2563eb;
-      --primary-dark: #1d4ed8;
-      --secondary-color: #1e40af;
-      --accent-color: #3b82f6;
-      --success-color: #059669;
-      --warning-color: #d97706;
+      --primary-color: #059669;
+      --primary-dark: #047857;
+      --secondary-color: #ea580c;
+      --accent-color: #10b981;
+      --success-color: #16a34a;
+      --warning-color: #f59e0b;
       --danger-color: #dc2626;
       --light-bg: #f8fafc;
       --dark-bg: #0f172a;
@@ -38,7 +38,7 @@
 
     body {
       font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
-      background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%);
+      background: linear-gradient(135deg, #059669 0%, #ea580c 100%);
       min-height: 100vh;
       display: flex;
       align-items: center;
@@ -47,6 +47,15 @@
       overflow: hidden;
       padding: 0;
       margin: 0;
+    }
+
+    /* Hide content initially to prevent flash */
+    body:not(.content-loaded) {
+      visibility: hidden;
+    }
+
+    body.content-loaded {
+      visibility: visible;
     }
 
     /* Animated background elements */
@@ -273,7 +282,7 @@
 
     input:focus {
       border-color: var(--primary-color);
-      box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+      box-shadow: 0 0 0 3px rgba(5, 150, 105, 0.1);
     }
 
     input::placeholder {
@@ -302,7 +311,7 @@
 
     .btn-primary:hover {
       transform: translateY(-2px);
-      box-shadow: 0 8px 20px rgba(37, 99, 235, 0.2);
+      box-shadow: 0 8px 20px rgba(5, 150, 105, 0.2);
     }
 
     .btn-secondary {
@@ -917,15 +926,15 @@
     <!-- Left side - Branding -->
     <div class="branding-section">
       <div class="logo">
-        <i class="icon-robot"></i>
+        <i class="icon-brain"></i>
       </div>
-      <h1 class="brand-title">Stackly AI Tools</h1>
-      <p class="brand-subtitle">Empowering Innovation with Advanced AI Solutions</p>
+      <h1 class="brand-title">Stackly Education</h1>
+      <p class="brand-subtitle">Empowering Learners with Quality Education Solutions</p>
       <ul class="brand-features">
-        <li><i class="icon-brain"></i> Advanced AI Models</li>
-        <li><i class="icon-cogs"></i> Automated Workflows</li>
-        <li><i class="icon-shield"></i> Secure & Reliable Platform</li>
-        <li><i class="icon-chart"></i> Performance Analytics & Insights</li>
+        <li><i class="icon-brain"></i> Expert-Led Courses</li>
+        <li><i class="icon-cogs"></i> Interactive Learning Platform</li>
+        <li><i class="icon-shield"></i> Secure & Reliable Education</li>
+        <li><i class="icon-chart"></i> Progress Tracking & Analytics</li>
       </ul>
     </div>
 
@@ -938,7 +947,7 @@
             <img src="assets/images/stackly_logo_transparent.png" alt="Stackly Logo" style="height: 30px; width: 50px;">
           </div>
           <h2 class="form-title">Welcome Back</h2>
-          <p class="form-subtitle">Sign in to access your AI tools dashboard</p>
+          <p class="form-subtitle">Sign in to access your learning dashboard</p>
         </div>
         <form id="loginForm">
           <div class="form-group">
@@ -971,10 +980,10 @@
       <div class="form-container" id="signupPage">
         <div class="form-header">
           <div class="form-icon">
-            <i class="icon-robot"></i>
+            <i class="icon-user-plus"></i>
           </div>
           <h2 class="form-title">Create Account</h2>
-          <p class="form-subtitle">Join our AI tools community</p>
+          <p class="form-subtitle">Join our learning community</p>
         </div>
         <form id="signupForm">
           <div class="form-group">
@@ -1109,6 +1118,8 @@
         window.location.href = "home.html";
       } else {
         showPage("loginPage");
+        // Show content only after auth check passes
+        document.body.classList.add("content-loaded");
       }
     }
 
@@ -1168,7 +1179,7 @@
           lastName: lastName
         };
         localStorage.setItem("users", JSON.stringify(users));
-        errorElement.innerHTML = '<i class="icon-check-circle"></i> Account created successfully! Welcome to our AI tools community. Redirecting to sign in...';
+        errorElement.innerHTML = '<i class="icon-check-circle"></i> Account created successfully! Welcome to our learning community. Redirecting to sign in...';
         errorElement.className = "success show";
         setTimeout(() => showPage("loginPage"), 2000);
       }
