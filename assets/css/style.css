@@ -231,9 +231,28 @@ body.dark-mode .header.scrolled {
     padding: 1rem 0;
 }
 
+/* Logo Styles - Consistent across all pages */
 .logo img {
-    height: 40px;
+    height: 60px;
     width: auto;
+    max-width: 120px;
+    object-fit: contain;
+}
+
+/* Footer logo specific styling */
+.footer-logo img {
+    height: 70px;
+    width: auto;
+    max-width: 140px;
+    object-fit: contain;
+}
+
+/* Login page logo specific styling */
+.form-icon img {
+    height: 45px;
+    width: auto;
+    max-width: 80px;
+    object-fit: contain;
 }
 
 .navigation {
@@ -862,8 +881,21 @@ body:not(.dark-mode) .hamburger span {
      }
 
      .logo img {
+       height: 50px;
+       width: auto;
+       max-width: 100px;
+     }
+     
+     .footer-logo img {
+       height: 55px;
+       width: auto;
+       max-width: 110px;
+     }
+     
+     .form-icon img {
        height: 35px;
        width: auto;
+       max-width: 60px;
      }
 
      .navigation {

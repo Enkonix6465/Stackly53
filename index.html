@@ -192,7 +192,7 @@
       margin: 0 auto;
       display: none;
       animation: slideIn 0.5s ease-out;
-      padding-bottom: 20px;
+      padding-bottom: 12px;
     }
 
     .form-container.active {
@@ -206,32 +206,33 @@
 
     .form-header {
       text-align: center;
-      margin-bottom: 40px;
+      margin-bottom: 24px;
     }
 
     .form-title {
-      font-size: 28px;
+      font-size: 24px;
       font-weight: 700;
       color: var(--text-primary);
-      margin-bottom: 8px;
+      margin-bottom: 6px;
     }
 
     .form-subtitle {
       color: var(--text-secondary);
-      font-size: 16px;
+      font-size: 14px;
+      margin-bottom: 0;
     }
 
     .form-icon {
-      width: 60px;
-      height: 60px;
+      width: 50px;
+      height: 50px;
       background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
       border-radius: 50%;
       display: flex;
       align-items: center;
       justify-content: center;
-      margin: 0 auto 20px;
+      margin: 0 auto 16px;
       color: white;
-      font-size: 24px;
+      font-size: 20px;
     }
 
     .form-icon img {
@@ -242,7 +243,7 @@
 
     /* Form elements */
     .form-group {
-      margin-bottom: 24px;
+      margin-bottom: 16px;
       position: relative;
     }
 
@@ -270,10 +271,10 @@
 
     input {
       width: 100%;
-      padding: 16px 16px 16px 48px;
+      padding: 12px 12px 12px 40px;
       border: 2px solid var(--border-color);
-      border-radius: 12px;
-      font-size: 16px;
+      border-radius: 10px;
+      font-size: 15px;
       color: var(--text-primary);
       background: var(--card-bg);
       transition: all 0.3s ease;
@@ -292,16 +293,16 @@
     /* Buttons */
     .btn {
       width: 100%;
-      padding: 16px;
+      padding: 12px;
       border: none;
-      border-radius: 12px;
-      font-size: 16px;
+      border-radius: 10px;
+      font-size: 15px;
       font-weight: 600;
       cursor: pointer;
       transition: all 0.3s ease;
       position: relative;
       overflow: hidden;
-      margin-bottom: 16px;
+      margin-bottom: 12px;
     }
 
     .btn-primary {
@@ -342,7 +343,7 @@
     /* Links */
     .form-links {
       text-align: center;
-      margin-top: 24px;
+      margin-top: 16px;
     }
 
     .form-links a {
@@ -488,7 +489,7 @@
       }
 
       .form-group {
-        margin-bottom: 25px;
+        margin-bottom: 18px;
       }
 
       .form-group label {
@@ -639,7 +640,7 @@
       }
 
       .form-group {
-        margin-bottom: 18px;
+        margin-bottom: 14px;
       }
 
       .form-group label {
@@ -759,7 +760,7 @@
       }
 
       .form-group {
-        margin-bottom: 16px;
+        margin-bottom: 12px;
       }
 
       .form-group label {
@@ -843,39 +844,39 @@
     }
     
     .icon-envelope::before {
-      content: "✉️";
+      content: "✉";
       font-size: 1em;
-      filter: brightness(0) invert(1);
+      color: #6b7280;
     }
     
     .icon-lock::before {
       content: "🔒";
       font-size: 1em;
-      filter: brightness(0) invert(1);
+      color: #6b7280;
     }
     
     .icon-user::before {
       content: "👤";
       font-size: 1em;
-      filter: brightness(0) invert(1);
+      color: #6b7280;
     }
     
     .icon-key::before {
       content: "🔑";
       font-size: 1em;
-      filter: brightness(0) invert(1);
+      color: #6b7280;
     }
     
     .icon-paper-plane::before {
       content: "✈️";
       font-size: 1em;
-      filter: brightness(0) invert(1);
+      color: #6b7280;
     }
     
     .icon-check::before {
       content: "✓";
       font-size: 1em;
-      filter: brightness(0) invert(1);
+      color: #6b7280;
     }
     
     .icon-exclamation::before {
@@ -899,13 +900,13 @@
     .icon-sign-in::before {
       content: "→";
       font-size: 1em;
-      filter: brightness(0) invert(1);
+      color: #6b7280;
     }
     
     .icon-user-plus::before {
       content: "👥";
       font-size: 1em;
-      filter: brightness(0) invert(1);
+      color: #6b7280;
     }
     
     .icon-exclamation-circle::before {
@@ -944,7 +945,7 @@
       <div class="form-container active" id="loginPage">
         <div class="form-header">
           <div class="form-icon">
-            <img src="assets/images/stackly_logo_transparent.png" alt="Stackly Logo" style="height: 30px; width: 50px;">
+            <img src="assets/images/stackly_logo_transparent.png" alt="Stackly Logo">
           </div>
           <h2 class="form-title">Welcome Back</h2>
           <p class="form-subtitle">Sign in to access your learning dashboard</p>
@@ -980,42 +981,42 @@
       <div class="form-container" id="signupPage">
         <div class="form-header">
           <div class="form-icon">
-            <i class="icon-user-plus"></i>
+            <img src="assets/images/stackly_logo_transparent.png" alt="Stackly Logo">
           </div>
           <h2 class="form-title">Create Account</h2>
           <p class="form-subtitle">Join our learning community</p>
         </div>
-        <form id="signupForm">
+        <form id="signupForm" autocomplete="off">
           <div class="form-group">
             <label for="signupFirstName">First Name</label>
             <div class="input-wrapper">
               <i class="icon-user"></i>
-              <input type="text" id="signupFirstName" placeholder="Enter your first name" required>
+              <input type="text" id="signupFirstName" name="signup_first_name" placeholder="Enter your first name" required autocomplete="off">
             </div>
           </div>
           <div class="form-group">
             <label for="signupLastName">Last Name</label>
             <div class="input-wrapper">
               <i class="icon-user"></i>
-              <input type="text" id="signupLastName" placeholder="Enter your last name" required>
+              <input type="text" id="signupLastName" name="signup_last_name" placeholder="Enter your last name" required autocomplete="off">
             </div>
           </div>
           <div class="form-group">
             <label for="signupEmail">Email Address</label>
             <div class="input-wrapper">
               <i class="icon-envelope"></i>
-              <input type="email" id="signupEmail" placeholder="Enter your email" required>
+              <input type="email" id="signupEmail" name="signup_email" placeholder="Enter your email" required autocomplete="off" readonly onfocus="this.removeAttribute('readonly')">
             </div>
           </div>
           <div class="form-group">
             <label for="signupPass">Password</label>
             <div class="input-wrapper">
               <i class="icon-lock"></i>
-              <input type="password" id="signupPass" placeholder="Create a password" required>
+              <input type="password" id="signupPass" name="signup_password" placeholder="Create a password" required autocomplete="new-password">
             </div>
           </div>
           <button type="submit" class="btn btn-primary">
-            <i class="icon-user-plus"></i> Create Account
+            <i class="icon-check"></i> Create Account
           </button>
         </form>
         <div class="form-links">
@@ -1110,6 +1111,16 @@
     function showPage(pageId) {
       document.querySelectorAll('.form-container').forEach(div => div.classList.remove('active'));
       document.getElementById(pageId).classList.add('active');
+      
+      // Clear form fields when showing signup page
+      if (pageId === 'signupPage') {
+        document.getElementById('signupFirstName').value = '';
+        document.getElementById('signupLastName').value = '';
+        document.getElementById('signupEmail').value = '';
+        document.getElementById('signupPass').value = '';
+        document.getElementById('signupError').innerHTML = '';
+        document.getElementById('signupError').classList.remove('show');
+      }
     }
 
     // Initialize

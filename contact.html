@@ -22,7 +22,7 @@
   <div class="container">
     <div class="nav-wrapper">
       <div class="logo">
-        <img src="assets/images/stackly_logo_transparent.png" alt="logo" style="height: 40px; width: 80px;">
+        <img src="assets/images/stackly_logo_transparent.png" alt="logo">
       </div>
 
       <nav class="navigation">
@@ -378,6 +378,105 @@
       box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
     }
 
+    .fancy-contact-image > div {
+      text-align: center;
+      padding: 20px 0;
+    }
+
+    .fancy-contact-image h2 {
+      color: #0E0E0E;
+      font-size: 24px;
+      font-weight: 600;
+      margin-bottom: 15px;
+      line-height: 1.3;
+    }
+
+    .fancy-contact-image p {
+      color: #374151;
+      font-size: 16px;
+      line-height: 1.6;
+      max-width: 400px;
+      margin: 0 auto;
+    }
+
+    /* Contact methods list styling */
+    .contact-methods-list {
+      text-align: left;
+      max-width: 600px;
+      margin: 20px auto;
+      padding: 0 20px;
+    }
+
+    .contact-methods-list li {
+      margin-bottom: 8px;
+      color: #374151;
+      line-height: 1.5;
+    }
+
+    .contact-methods-list strong {
+      color: #0E0E0E;
+    }
+
+    /* Contact card content styling */
+    .contact-card-content {
+      text-align: left;
+      margin-bottom: 20px;
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .contact-card-content p {
+      margin-bottom: 10px;
+      color: #374151;
+      font-size: 14px;
+    }
+
+    .contact-card-content ul {
+      margin: 10px 0 15px 20px;
+      padding: 0;
+    }
+
+    .contact-card-content li {
+      margin-bottom: 5px;
+      color: #374151;
+      font-size: 14px;
+      line-height: 1.4;
+    }
+
+    .contact-card-content strong {
+      color: #0E0E0E;
+      font-weight: 600;
+    }
+
+    /* Fix contact info alignment */
+    .feature-card strong {
+      display: block;
+      text-align: center;
+      margin-top: auto;
+      padding: 10px;
+      background: #f8f9fa;
+      border-radius: 6px;
+      color: #0E0E0E;
+      font-weight: 600;
+      font-size: 16px;
+    }
+
+    /* Fix heading alignment and wrapping */
+    .feature-card h3 {
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      font-size: 18px;
+      line-height: 1.2;
+      margin-bottom: 20px;
+      min-height: 44px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
     /* Mobile Optimizations */
     @media (max-width: 768px) {
       .fancy-contact-section {
@@ -411,6 +510,50 @@
       .fancy-contact-image {
         min-height: 200px;
         order: -1; /* Moves image above form on mobile */
+      }
+
+      .fancy-contact-image > div {
+        padding: 15px 0;
+      }
+
+      .fancy-contact-image h2 {
+        font-size: 20px;
+        margin-bottom: 10px;
+      }
+
+      .fancy-contact-image p {
+        font-size: 14px;
+        padding: 0 10px;
+      }
+
+      .contact-methods-list {
+        padding: 0 10px;
+        margin: 15px auto;
+      }
+
+      .contact-methods-list li {
+        font-size: 14px;
+        margin-bottom: 6px;
+      }
+
+      .contact-card-content p {
+        font-size: 13px;
+      }
+
+      .contact-card-content li {
+        font-size: 13px;
+      }
+
+      .feature-card strong {
+        font-size: 14px;
+        padding: 8px;
+      }
+
+      .feature-card h3 {
+        font-size: 16px;
+        white-space: normal;
+        line-height: 1.3;
+        min-height: auto;
       }
     }
 
@@ -456,10 +599,12 @@
 
 /* 🌟 Grid Layout */
 .features-grid {
-  display: flex;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
   gap: 30px;
-  flex-wrap: wrap;
+  align-items: stretch;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 /* 🌟 Cards */
@@ -467,11 +612,13 @@
   background: #fff;
   padding: 30px;
   border-radius: 16px;
-  flex: 1 1 350px;
-  max-width: 420px;
   text-align: center;
   box-shadow: 0 8px 18px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  min-height: 400px;
 }
 
 .feature-card:hover {
@@ -506,15 +653,23 @@
   margin-bottom: 15px;
 }
 
-/* 📱 Mobile Responsive */
+/* 📱 Tablet Responsive */
 @media (max-width: 992px) {
   .features-grid {
-    flex-direction: column;
-    align-items: center;
+    grid-template-columns: 1fr;
+    gap: 20px;
   }
 
   .feature-card {
     max-width: 100%;
+  }
+}
+
+/* 📱 Mobile Responsive */
+@media (max-width: 768px) {
+  .features-grid {
+    grid-template-columns: 1fr;
+    gap: 15px;
   }
 
   .features-section h2 {
@@ -566,32 +721,58 @@
     <div class="section-header animate-fade-up">
       <h2 data-i18n="multiConnect">Multiple Ways to Connect with Our Education Team</h2>
       <p class="text-justify" data-i18n="multiPara">
-        We provide several easy and reliable ways for you to connect with our education experts team. Whether you wish to email us, call directly, or visit our office, we are here to offer quick assistance and professional support for course enrollment, career guidance, or partnership opportunities.
+        We provide several easy and reliable ways for you to connect with our education experts team:
+      </p>
+      <ul class="contact-methods-list">
+        <li><strong data-i18n="emailSupport">Email Support:</strong> <span data-i18n="emailSupportDesc">Quick responses for course inquiries and enrollment</span></li>
+        <li><strong data-i18n="phoneConsult">Phone Consultation:</strong> <span data-i18n="phoneConsultDesc">Direct access to education experts during business hours</span></li>
+        <li><strong data-i18n="officeLocation">Office Visits:</strong> <span data-i18n="officeVisitDesc">In-person meetings for comprehensive career guidance</span></li>
+      </ul>
+      <p class="text-justify" data-i18n="supportSummary">
+        We're here to offer professional support for course enrollment, career guidance, and partnership opportunities.
       </p>
     </div>
     <div class="features-grid">
       <div class="feature-card animate-fade-up delay-1">
         <div class="feature-icon"><i class="fas fa-envelope"></i></div>
         <h3 data-i18n="emailSupport">Education Support</h3>
-        <p class="text-justify" data-i18n="emailText">
-          Write to us for any questions about courses, enrollment, or career guidance. Our education support team responds promptly with guidance and resources to help you achieve your learning goals and career success.
-        </p>
+        <div class="contact-card-content">
+          <p><strong data-i18n="whatWeHelpWith">What we help with:</strong></p>
+          <ul>
+            <li data-i18n="courseInfo">Course information and enrollment</li>
+            <li data-i18n="careerGuidance">Career guidance and planning</li>
+            <li data-i18n="academicSupport">Academic support and resources</li>
+          </ul>
+          <p><strong data-i18n="responseTime">Response time:</strong> <span data-i18n="within24Hours">Within 24 hours</span></p>
+        </div>
         <strong>contact@stackly.in</strong>
       </div>
       <div class="feature-card animate-fade-up delay-2">
         <div class="feature-icon"><i class="fas fa-phone"></i></div>
         <h3 data-i18n="phoneConsult">Education Consultation Hotline</h3>
-        <p class="text-justify" data-i18n="phoneText">
-          Call us directly to learn more about our courses, career guidance services, or partnership opportunities. Our education experts are available during business hours to provide personalized consultation and academic guidance.
-        </p>
+        <div class="contact-card-content">
+          <p><strong data-i18n="availableFor">Available for:</strong></p>
+          <ul>
+            <li data-i18n="courseConsultations">Course consultations and enrollment</li>
+            <li data-i18n="careerGuidance">Career guidance and planning</li>
+            <li data-i18n="partnershipOpportunities">Partnership opportunities</li>
+          </ul>
+          <p><strong data-i18n="hours">Hours:</strong> <span data-i18n="businessHours">Business hours (9 AM - 6 PM)</span></p>
+        </div>
         <strong>+1 (555) 123-4567</strong>
       </div>
       <div class="feature-card animate-fade-up delay-3">
         <div class="feature-icon"><i class="fas fa-map-marker-alt"></i></div>
         <h3 data-i18n="officeLocation">Education Center</h3>
-        <p class="text-justify" data-i18n="officeText">
-          Visit our education center to meet the team, learn more about our comprehensive courses, and explore ways you can transform your career. We welcome students, professionals, and partners to join us in driving educational advancement.
-        </p>
+        <div class="contact-card-content">
+          <p><strong data-i18n="whatYouCanDo">What you can do:</strong></p>
+          <ul>
+            <li data-i18n="meetTeam">Meet our education team in person</li>
+            <li data-i18n="exploreCourses">Explore comprehensive course offerings</li>
+            <li data-i18n="careerTransformation">Get personalized career transformation guidance</li>
+          </ul>
+          <p><strong data-i18n="openTo">Open to:</strong> <span data-i18n="studentsProfessionals">Students, professionals, and partners</span></p>
+        </div>
         <strong>123 Hyderabad, India</strong>
       </div>
     </div>
@@ -820,35 +1001,27 @@
 <!-- Section : 5 -->
 <section class="testimonials-section section-padding faq-section">
   <div class="container">
-    <div class="content-layout reverse">
-      <!-- Left Content -->
-      <div class="content-text">
-        <h2 class="animate-fade-up" data-i18n="faqTitle">Frequently Asked Questions</h2>
-        <p class="text-justify animate-fade-up delay-1" data-i18n="faqIntro">
-          Find quick answers to common questions about our courses, educational programs, and support services. 
-          This FAQ section covers the key details to help you get started and transform your career.
-        </p>
-        
-        <!-- FAQ Item 1 -->
-        <div class="faq-item animate-fade-up delay-2">
-          <blockquote class="text-justify">
-            <strong data-i18n="faqQ1">Q: How can I get started with your courses?</strong><br>
-            <span data-i18n="faqA1">A: You can get started online through our website, by scheduling a consultation, or in person at our education center. All our courses are designed to transform your career and drive professional growth.</span>
-          </blockquote>
-        </div>
-
-        <!-- FAQ Item 2 -->
-        <div class="faq-item animate-fade-up delay-3">
-          <blockquote class="text-justify">
-            <strong data-i18n="faqQ2">Q: Can I partner with your education team?</strong><br>
-            <span data-i18n="faqA2">A: Yes, we welcome partnerships for course development, educational projects, technology integration, and learning initiatives. You can register as a partner through our contact page.</span>
-          </blockquote>
-        </div>
+    <div class="faq-content-full">
+      <h2 class="animate-fade-up" data-i18n="faqTitle">Frequently Asked Questions</h2>
+      <p class="text-justify animate-fade-up delay-1" data-i18n="faqIntro">
+        Find quick answers to common questions about our courses, educational programs, and support services. 
+        This FAQ section covers the key details to help you get started and transform your career.
+      </p>
+      
+      <!-- FAQ Item 1 -->
+      <div class="faq-item animate-fade-up delay-2">
+        <blockquote class="text-justify">
+          <strong data-i18n="faqQ1">Q: How can I get started with your courses?</strong><br>
+          <span data-i18n="faqA1">A: You can get started online through our website, by scheduling a consultation, or in person at our education center. All our courses are designed to transform your career and drive professional growth.</span>
+        </blockquote>
       </div>
 
-      <!-- Right Image -->
-      <div class="content-image animate-slide-in delay-2">
-        <img src="https://i.pinimg.com/736x/91/c9/fe/91c9fe894c22dfe20d272ffd73db8225.jpg" alt="AI Solutions FAQ">
+      <!-- FAQ Item 2 -->
+      <div class="faq-item animate-fade-up delay-3">
+        <blockquote class="text-justify">
+          <strong data-i18n="faqQ2">Q: Can I partner with your education team?</strong><br>
+          <span data-i18n="faqA2">A: Yes, we welcome partnerships for course development, educational projects, technology integration, and learning initiatives. You can register as a partner through our contact page.</span>
+        </blockquote>
       </div>
     </div>
   </div>
@@ -921,7 +1094,7 @@
       <!-- Brand & About -->
       <div class="footer-block footer-brand footer-block1">
         <div class="footer-logo">
-          <img src="assets/images/stackly_logo_transparent.png" alt="logo" style="height: 50px; width: 80px;">
+          <img src="assets/images/stackly_logo_transparent.png" alt="logo">
         </div>
 
         <p style="text-align: justify;" data-i18n="footer_about">
@@ -1135,7 +1308,28 @@ const translations = {
     "letsTalk": "Let's Discuss Your Learning Goals",
     "contactIntro": "Ready to transform your career with quality education? Our expert team is ready to help. Fill out the form below and we'll respond within 24 hours with personalized learning solutions.",
     "multiConnect": "Multiple Ways to Connect with Our Education Team",
-    "multiPara": "We provide several easy and reliable ways for you to connect with our education experts team. Whether you wish to email us, call directly, or visit our office, we are here to offer quick assistance and professional support for course enrollment, career guidance, or partnership opportunities.",
+    "multiPara": "We provide several easy and reliable ways for you to connect with our education experts team:",
+    "emailSupportDesc": "Quick responses for course inquiries and enrollment",
+    "phoneConsultDesc": "Direct access to education experts during business hours",
+    "officeVisitDesc": "In-person meetings for comprehensive career guidance",
+    "supportSummary": "We're here to offer professional support for course enrollment, career guidance, and partnership opportunities.",
+    "whatWeHelpWith": "What we help with:",
+    "courseInfo": "Course information and enrollment",
+    "careerGuidance": "Career guidance and planning",
+    "academicSupport": "Academic support and resources",
+    "responseTime": "Response time:",
+    "within24Hours": "Within 24 hours",
+    "availableFor": "Available for:",
+    "courseConsultations": "Course consultations and enrollment",
+    "partnershipOpportunities": "Partnership opportunities",
+    "hours": "Hours:",
+    "businessHours": "Business hours (9 AM - 6 PM)",
+    "whatYouCanDo": "What you can do:",
+    "meetTeam": "Meet our education team in person",
+    "exploreCourses": "Explore comprehensive course offerings",
+    "careerTransformation": "Get personalized career transformation guidance",
+    "openTo": "Open to:",
+    "studentsProfessionals": "Students, professionals, and partners",
     "emailSupport": "Education Support",
     "emailText": "Write to us for any questions about courses, enrollment, or career guidance. Our education support team responds promptly with guidance and resources to help you achieve your learning goals and career success.",
     "phoneConsult": "Education Consultation Hotline",
@@ -1217,7 +1411,28 @@ const translations = {
     "letsTalk": "دعونا نناقش أهدافك التعليمية",
     "contactIntro": "هل أنت مستعد لتحويل مسيرتك المهنية بتعليم جيد؟ فريق الخبراء لدينا جاهز لمساعدتك. املأ النموذج أدناه وسنرد خلال 24 ساعة بحلول تعليمية مخصصة.",
     "multiConnect": "طرق متعددة للتواصل مع فريق التعليم لدينا",
-    "multiPara": "نحن نوفر عدة طرق سهلة وموثوقة للتواصل مع فريق خبراء التعليم لدينا. سواء كنت ترغب في مراسلتنا عبر البريد الإلكتروني، الاتصال بنا مباشرة، أو زيارة مكتبنا، فنحن هنا لتقديم المساعدة السريعة والدعم المهني للتسجيل في الدورات أو التوجيه المهني أو فرص الشراكة.",
+    "multiPara": "نحن نوفر عدة طرق سهلة وموثوقة للتواصل مع فريق خبراء التعليم لدينا:",
+    "emailSupportDesc": "استجابات سريعة لاستفسارات الدورات والتسجيل",
+    "phoneConsultDesc": "وصول مباشر لخبراء التعليم خلال ساعات العمل",
+    "officeVisitDesc": "اجتماعات شخصية للإرشاد المهني الشامل",
+    "supportSummary": "نحن هنا لتقديم الدعم المهني لتسجيل الدورات، والإرشاد المهني، وفرص الشراكة.",
+    "whatWeHelpWith": "ما نساعد فيه:",
+    "courseInfo": "معلومات الدورات والتسجيل",
+    "careerGuidance": "الإرشاد المهني والتخطيط",
+    "academicSupport": "الدعم الأكاديمي والموارد",
+    "responseTime": "وقت الاستجابة:",
+    "within24Hours": "خلال 24 ساعة",
+    "availableFor": "متاح لـ:",
+    "courseConsultations": "استشارات الدورات والتسجيل",
+    "partnershipOpportunities": "فرص الشراكة",
+    "hours": "الساعات:",
+    "businessHours": "ساعات العمل (9 صباحاً - 6 مساءً)",
+    "whatYouCanDo": "ما يمكنك فعله:",
+    "meetTeam": "مقابلة فريق التعليم لدينا شخصياً",
+    "exploreCourses": "استكشاف عروض الدورات الشاملة",
+    "careerTransformation": "الحصول على إرشاد شخصي لتحويل المسار المهني",
+    "openTo": "مفتوح لـ:",
+    "studentsProfessionals": "الطلاب والمهنيين والشركاء",
     "emailSupport": "دعم التعليم",
     "emailText": "اكتب إلينا لأي استفسارات حول الدورات أو التسجيل أو التوجيه المهني. يستجيب فريق دعم التعليم لدينا بسرعة بتوجيهات وموارد لمساعدتك على تحقيق أهدافك التعليمية والنجاح المهني.",
     "phoneConsult": "خط استشارة التعليم",
@@ -1300,7 +1515,28 @@ const translations = {
     "letsTalk": "בואו נדבר על יעדי הלמידה שלכם",
     "contactIntro": "מוכן להפוך את הקריירה שלך עם חינוך איכותי? צוות המומחים שלנו מוכן לעזור. מלא את הטופס למטה ונחזור אליך תוך 24 שעות עם פתרונות למידה מותאמים אישית.",
     "multiConnect": "מספר דרכים להתחבר עם צוות החינוך שלנו",
-    "multiPara": "אנו מספקים מספר דרכים נוחות ואמינות להתחבר עם צוות מומחי החינוך שלנו. בין אם ברצונך לשלוח לנו אימייל, להתקשר ישירות או לבקר במשרדנו, אנו כאן כדי להציע עזרה מהירה ותמיכה מקצועית להרשמה לקורסים, הכוונה מקצועית או הזדמנויות לשותפות.",
+    "multiPara": "אנו מספקים מספר דרכים נוחות ואמינות להתחבר עם צוות מומחי החינוך שלנו:",
+    "emailSupportDesc": "תגובות מהירות לשאלות על קורסים ורישום",
+    "phoneConsultDesc": "גישה ישירה למומחי חינוך בשעות העבודה",
+    "officeVisitDesc": "פגישות אישיות להכוונה מקצועית מקיפה",
+    "supportSummary": "אנחנו כאן כדי להציע תמיכה מקצועית לרישום לקורסים, הכוונה קריירה, והזדמנויות שותפות.",
+    "whatWeHelpWith": "במה אנחנו עוזרים:",
+    "courseInfo": "מידע על קורסים ורישום",
+    "careerGuidance": "הכוונה קריירה ותכנון",
+    "academicSupport": "תמיכה אקדמית ומשאבים",
+    "responseTime": "זמן תגובה:",
+    "within24Hours": "תוך 24 שעות",
+    "availableFor": "זמין עבור:",
+    "courseConsultations": "ייעוץ קורסים ורישום",
+    "partnershipOpportunities": "הזדמנויות שותפות",
+    "hours": "שעות:",
+    "businessHours": "שעות עבודה (9:00-18:00)",
+    "whatYouCanDo": "מה אתם יכולים לעשות:",
+    "meetTeam": "פגישה אישית עם צוות החינוך שלנו",
+    "exploreCourses": "גילוי הצעות קורסים מקיפות",
+    "careerTransformation": "קבלת הכוונה אישית לשינוי קריירה",
+    "openTo": "פתוח עבור:",
+    "studentsProfessionals": "סטודנטים, אנשי מקצוע ושותפים",
     "emailSupport": "תמיכה בחינוך",
     "emailText": "כתוב לנו עבור כל שאלה על קורסים, הרשמה או הכוונה מקצועית. צוות התמיכה בחינוך שלנו מגיב במהירות עם הנחיות ומשאבים שיעזרו לך להשיג את יעדי הלמידה והצלחה מקצועית.",
     "phoneConsult": "קו ייעוץ חינוך",
@@ -1433,6 +1669,92 @@ body.dark-mode .fancy-contact-image img {
 body.dark-mode .fancy-contact-form h2,
 body.dark-mode .fancy-contact-image h2 {
   color: #00f7ff !important;
+}
+
+body.dark-mode .fancy-contact-image p {
+  color: #d1d5db !important;
+}
+
+body.dark-mode .contact-methods-list li {
+  color: #d1d5db !important;
+}
+
+body.dark-mode .contact-methods-list strong {
+  color: #e0e0e0 !important;
+}
+
+body.dark-mode .contact-card-content p {
+  color: #d1d5db !important;
+}
+
+body.dark-mode .contact-card-content li {
+  color: #d1d5db !important;
+}
+
+body.dark-mode .contact-card-content strong {
+  color: #e0e0e0 !important;
+}
+
+/* FAQ Full Width Content */
+.faq-content-full {
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.faq-content-full h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 2.5rem;
+  color: #0b1945;
+}
+
+.faq-content-full p {
+  text-align: center;
+  margin-bottom: 40px;
+  font-size: 1.1rem;
+  color: #374151;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.faq-item {
+  margin-bottom: 30px;
+  padding: 25px;
+  background: #f8f9fa;
+  border-radius: 12px;
+  border-left: 4px solid #667eea;
+}
+
+.faq-item blockquote {
+  margin: 0;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.faq-item strong {
+  color: #0b1945;
+  font-size: 1.1rem;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.faq-item span {
+  color: #374151;
+  font-size: 0.95rem;
+}
+
+/* Dark mode FAQ adjustments */
+body.dark-mode .faq-content-full h2 { color: #00f7ff !important; }
+body.dark-mode .faq-content-full p { color: #d1d5db !important; }
+body.dark-mode .faq-item { background: #334155 !important; }
+body.dark-mode .faq-item strong { color: #e0e0e0 !important; }
+body.dark-mode .faq-item span { color: #d1d5db !important; }
+
+body.dark-mode .feature-card strong {
+  background: #334155 !important;
+  color: #e0e0e0 !important;
 }
 
 body.dark-mode .fancy-contact-form label {

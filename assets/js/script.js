@@ -20,12 +20,14 @@ document.querySelectorAll('.pjax-link').forEach(link => {
       .then(html => {
         const parser = new DOMParser();
         const doc = parser.parseFromString(html, 'text/html');
-        const newContent = doc.querySelector('#main-content').innerHTML;
-        document.querySelector('#main-content').innerHTML = newContent;
+        const newContent = doc.querySelector('#content').innerHTML;
+        document.querySelector('#content').innerHTML = newContent;
         history.pushState(null, '', url);
 
         // Re-initialize lazy loading for new content
-        initLazyLoad();
+        if (typeof initLazyLoad === 'function') {
+          initLazyLoad();
+        }
       });
   });
 });
